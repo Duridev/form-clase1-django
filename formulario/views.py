@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .forms import ContactoForm
 
-# Create your views here.
+def contacto_view(request):
+    form = ContactoForm()
+    return render(request, "formulario.html", {"form": form})
+
