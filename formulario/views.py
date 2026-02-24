@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .forms import ContactoForm
 
+def index(request):
+    return render(request, 'formulario/index.html')
+
 def contacto_view(request):
     if request.method == "POST":
         form = ContactoForm(request.POST)
