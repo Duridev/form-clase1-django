@@ -7,7 +7,7 @@ def index(request):
         form = ContactoForm(request.POST)
         if form.is_valid():
             nombre = form.cleaned_data["nombre"]
-            return render(request, "formulario/exito.html")
+            return render(request, "formulario/exito.html", {'datos': form.cleaned_data })
     else:
         form = ContactoForm()
     return render(request, "formulario/index.html", {"form": form})

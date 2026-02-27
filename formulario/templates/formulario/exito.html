@@ -7,5 +7,12 @@
 </head>
 <body>
     <h1>Éxito!</h1>
+
+    <h2>Sus Datos son:</h2>
+    {% for key,value in datos.items %}
+    <p><strong>{{ key }}:</strong> {{ value }}</p>
+    {% endfor %}
+
+
 </body>
 </html>
